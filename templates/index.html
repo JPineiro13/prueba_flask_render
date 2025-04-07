@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predicción de estación</title>
+</head>
+<body>
+    <h1>¿Qué estación es hoy?</h1>
+    <form method="POST">
+        <label>Max TemperatureC:</label><input type="number" name="max_temp" step="any"><br>
+        <label>Mean TemperatureC:</label><input type="number" name="mean_temp" step="any"><br>
+        <label>Min TemperatureC:</label><input type="number" name="min_temp" step="any"><br>
+        <label>Max Humidity:</label><input type="number" name="max_hum" step="any"><br>
+        <label>Mean Humidity:</label><input type="number" name="mean_hum" step="any"><br>
+        <label>Min Humidity:</label><input type="number" name="min_hum" step="any"><br>
+        <label>Max Wind SpeedKm/h:</label><input type="number" name="max_wind" step="any"><br>
+        <label>Mean Wind SpeedKm/h:</label><input type="number" name="mean_wind" step="any"><br>
+        <label>Precipitationmm:</label><input type="number" name="precip" step="any"><br><br>
+        <input type="submit" value="Predecir estación">
+    </form>
+
+    {% if prediction %}
+        <h2>Resultado: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
