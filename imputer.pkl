@@ -1,0 +1,7 @@
+import joblib
+
+# Guardar modelo
+joblib.dump(best_model, 'model.pkl')
+
+# Guardar imputador
+joblib.dump(imputer, 'imputer.pkl')
