@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Flask</title>
+</head>
+<body>
+    <h1>Calculadora de Suma y Duplicado</h1>
+
+    <form method="POST">
+        <label for="num1">Número 1:</label>
+        <input type="number" name="num1" step="any" required><br><br>
+
+        <label for="num2">Número 2:</label>
+        <input type="number" name="num2" step="any" required><br><br>
+
+        <label for="num3">Número 3:</label>
+        <input type="number" name="num3" step="any" required><br><br>
+
+        <button type="submit" name="sumar">Sumar</button>
+        <button type="submit" name="duplicar">Duplicar</button>
+    </form>
+
+    {% if resultado is not none %}
+        <h2>Resultado:</h2>
+        <p>{{ resultado }}</p>
+    {% endif %}
+</body>
+</html>
